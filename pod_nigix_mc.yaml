@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mc2
+  name: ipc_python
 spec:
   containers:
     - name: producer
-      image: nginx
+      image: python
     - name: consumer
-      image: nginx
+      image: python
   restartPolicy: Never
