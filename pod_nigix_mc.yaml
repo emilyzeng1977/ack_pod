@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mc2
+spec:
+  containers:
+    - name: producer
+      image: nginx
+    - name: consumer
+      image: nginx
+  restartPolicy: Never
