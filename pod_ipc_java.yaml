@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ipc_pod_demo
+spec:
+  containers:
+    - name: server
+      image: zengemily79/ipc_server
+      resources:
+      command: ["/bin/sh","-c"]
+      args: ["-c", "while true; do echo hello; sleep 10;done"]
+    - name: client
+      image: zengemily79/ipc_client
+      resources:
+      command: ["/bin/sh","-c"]
+      args: ["-c", "while true; do echo hello; sleep 10;done"]
+  restartPolicy: Never
